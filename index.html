@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="mt-[20%] gap-16 flex items-center flex-col justify-center bg-sky-300">
+    
+    <section class="flex flex-col gap-3 items-center justify-center bg-slate-300 p-4 shadow-sm rounded">
+        <h1 class="text-4xl">Cajero Automatico</h1>
+
+        <p class="text-2xl ">Saldo Actual: <span class="font-bold"> RD$ <span id="showMoney">20,000.00</span></span></p>
+
+        <input type="numbers"  name="quantity" id="quantity" placeholder="Ingrese la cantidad a retirar o depositar" class="px-3 py-2 w-full">
+
+        <div class="w-full items-center justify-bettween">
+            <button onclick="consulta()" class="px-5 py-2 font-bold bg-blue-500">Consultar Saldo</button>
+            <button onclick="retiro()" class="px-5 py-2 font-bold bg-red-500">Retiro</button>
+            <button onclick="deposito()" class="px-5 py-2 font-bold bg-green-500">Deposito</button>
+        </div>
+
+    </section>
+
+    <section>
+        <h2 class="text-3xl font-bold mb-5">Transacciones</h2>
+        <ul id="transactionsList"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
